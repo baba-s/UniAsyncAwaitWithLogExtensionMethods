@@ -14,6 +14,7 @@ public sealed class Example : MonoBehaviour
     private async void Start()
     {
 #if ENABLE_RELEASE
+        // リリースビルドの時はログ出力を無効化
         AsyncAwaitWithLogExtensionMethods.OnStartLog      = null;
         AsyncAwaitWithLogExtensionMethods.OnFinishLog     = null;
         AsyncAwaitWithLogExtensionMethods.OnStartTimeLog  = null;
